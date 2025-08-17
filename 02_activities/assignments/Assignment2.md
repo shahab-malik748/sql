@@ -54,7 +54,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+The two options are as follows:
+1. Overwrite - replaces new address with old address in the dimension table. It is simpler to implement and requires less space but you lose historical information
+2. Add new row - when an address changes a new record is created in the dimension table enabling preservation of historical info. The downside is that this approach has the risk of ballooning up the storage requirements
 ```
 
 ***
